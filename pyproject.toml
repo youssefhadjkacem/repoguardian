@@ -1,0 +1,19 @@
+[project]
+name = "taskapi"
+version = "0.1.0"
+description = "Appli démo pour RepoGuardian (équipe d'agents GitHub)"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
